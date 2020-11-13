@@ -11,35 +11,57 @@
 <body>
 
   <section class="py-4">
-    <div class="container d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-center justify-content-lg-between">
+    <div class="container d-flex flex-column flex-lg-row align-items-center justify-content-center justify-content-lg-between pb-5 position-relative">
       <div>
-        <h2 class="mb-4">Phone numbers book</h2>
+        <div class="typewriter">
+          <h2 class="phonebook-heading mb-4 font-weight-bold" id="text">Phone numbers book</h2>
+        </div>
         <div class="phone-numbers-design d-none">
-          <img class="d-block rounded" src="img/phonebook.jpg" alt="Phonebook" width="300" height="300">
+          <img class="d-block rounded" src="img/phonebook.jpg" alt="Phonebook" width="250" height="250">
           <ul class="list-group">
             <li class="phone-numbers-item list-group-item text-center font-weight-bold w-100">91-164-97-18</li>
             <li class="phone-numbers-item list-group-item text-center font-weight-bold w-100">99-855-39-21</li>
             <li class="phone-numbers-item list-group-item text-center font-weight-bold w-100">90-901-23-63</li>
-            <li class="phone-numbers-item list-group-item text-center font-weight-bold w-100">91-123-45-67</li>
           </ul>
         </div>
       </div>
       <form class="phone-numbers-form w-50 d-flex flex-column" method="post" action="https://echo.htmlacademy.ru">
-        <h3>Fill out</h3>
+        <h3 class="font-italic mb-4">Fill out</h3>
         <div class="form-group d-flex align-items-center position-relative">
           <label class="phone-numbers-label d-flex align-items-center mb-0 text-uppercase text-right position-absolute" for="name-input">Name <sup class="phone-numbers-label-sup ml-1">*</sup></label>
-          <input class="phone-numbers-input w-100" type="text" name="name" id="name-input" required>
+          <input class="phone-numbers-input w-100" type="text" name="name" id="name-input" placeholder="Name" required>
         </div>
         <div class="form-group d-flex align-items-center position-relative">
           <label class="phone-numbers-label d-flex align-items-center mb-0 text-uppercase text-right position-absolute" for="surname-input">Surname <sup class="phone-numbers-label-sup ml-1">*</sup></label>
-          <input class="phone-numbers-input" type="text" name="surname" id="surname-input" required>
+          <input class="phone-numbers-input w-100" type="text" name="surname" id="surname-input" placeholder="Surname" required>
         </div>
+        <div class="form-group d-flex align-items-center position-relative">
+          <label class="phone-numbers-label d-flex align-items-center mb-0 text-uppercase text-right position-absolute" for="phone-input">Tel <sup class="phone-numbers-label-sup ml-1">*</sup></label>
+          <input class="phone-numbers-input w-100" type="tel" name="phone-number" id="phone-input" placeholder="00-000-00-00" required>
+        </div>
+        <div class="form-group d-flex align-items-center position-relative">
+          <label class="phone-numbers-label d-flex align-items-center mb-0 text-uppercase text-right position-absolute" for="relate-input">Relate <sup class="phone-numbers-label-sup ml-1">*</sup></label>
+          <input class="phone-numbers-input w-100" type="text" name="relateiveness" id="relate-input" placeholder="Relateiveness" required>
+        </div>
+        <button class="phone-numbers-button btn btn-dark text-white align-self-start text-uppercase font-weight-bold" type="submit">Add new contact</button>
       </form>
+      <div class="butterfly-container position-absolute">
+        <div class="butterfly-container-inner">
+          <div class="hover-container">
+            <div class="left wing"></div>
+            <div class="right wing"></div>
+            <div class="body"></div>
+            <div class="head"></div>
+          </div>
+        </div>
+    </div>
     </div>
   </section>
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/butterfly.js"></script>
+  <script src="js/typewriter.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
