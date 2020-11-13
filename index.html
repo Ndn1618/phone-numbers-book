@@ -3,15 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>55-dars. Bootstrap. container va boshqa umumiy masalalar</title>
+  <title>Phone Numbers Online Book</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
- 
-  
 
+  <section class="py-4">
+    <div class="container d-flex flex-column flex-lg-row align-items-center align-items-lg-start justify-content-center justify-content-lg-between">
+      <div>
+        <h2 class="mb-4">Phone numbers book</h2>
+        <div class="phone-numbers-design d-none">
+          <img class="d-block rounded" src="img/phonebook.jpg" alt="Phonebook" width="300" height="300">
+          <ul class="list-group">
+            <li class="phone-numbers-item list-group-item text-center font-weight-bold w-100">91-164-97-18</li>
+            <li class="phone-numbers-item list-group-item text-center font-weight-bold w-100">99-855-39-21</li>
+            <li class="phone-numbers-item list-group-item text-center font-weight-bold w-100">90-901-23-63</li>
+            <li class="phone-numbers-item list-group-item text-center font-weight-bold w-100">91-123-45-67</li>
+          </ul>
+        </div>
+      </div>
+      <form class="phone-numbers-form w-50 d-flex flex-column" method="post" action="https://echo.htmlacademy.ru">
+        <h3>Fill out</h3>
+        <div class="form-group d-flex align-items-center position-relative">
+          <label class="phone-numbers-label d-flex align-items-center mb-0 text-uppercase text-right position-absolute" for="name-input">Name <sup class="phone-numbers-label-sup ml-1">*</sup></label>
+          <input class="phone-numbers-input w-100" type="text" name="name" id="name-input" required>
+        </div>
+        <div class="form-group d-flex align-items-center position-relative">
+          <label class="phone-numbers-label d-flex align-items-center mb-0 text-uppercase text-right position-absolute" for="surname-input">Surname <sup class="phone-numbers-label-sup ml-1">*</sup></label>
+          <input class="phone-numbers-input" type="text" name="surname" id="surname-input" required>
+        </div>
+      </form>
+    </div>
+  </section>
 
   <script src="js/jquery-3.5.1.min.js"></script>
   <script src="js/bootstrap.bundle.min.js"></script>

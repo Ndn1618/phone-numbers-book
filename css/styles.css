@@ -12,6 +12,7 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Livvic", "Arial", sans-serif;
+  font-size: 18px;
 }
 
 img {
@@ -21,4 +22,69 @@ img {
 
 h1 {
   font-weight: bold;
+}
+
+.phone-numbers-label {
+  z-index: 1;
+  transform: translateX(-100%);
+  color: #29241c;
+  padding: 12px 10px 0 0;
+}
+
+.phone-numbers-label-sup {
+  color: #b31808;
+}
+
+.phone-numbers-item {
+  background-color: #f3e0b3;
+}
+
+.phone-numbers-item:nth-child(1) {
+  margin-top: -10px;
+  margin-left: 15px;
+}
+
+.phone-numbers-item:nth-child(2) {
+  margin-top: -10px;
+  margin-left: 30px;
+}
+
+.phone-numbers-item:nth-child(3) {
+  margin-top: -10px;
+  margin-left: 45px;
+}
+
+.phone-numbers-item:nth-child(4) {
+  margin-top: -10px;
+  margin-left: 60px;
+}
+
+.phone-numbers-input {
+  max-width: 384px;
+  color: #042d2e;
+  padding: 5px 0 0 20px;
+  background: url("../img/input-bg.png") no-repeat;
+  border: 4px solid #32a3ad;
+}
+
+.phone-numbers-input:focus {
+  outline: none;
+  border: 4px solid #205b64;
+}
+
+@media only screen and (max-width: 400px) {
+  .phone-numbers-form {
+    width: 100%!important;
+  }
+
+  .phone-numbers-label {
+    position: relative!important;
+    transform: none;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .phone-numbers-design {
+    display: block!important;
+  }
 }
