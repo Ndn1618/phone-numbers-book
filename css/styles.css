@@ -209,6 +209,18 @@ h1 {
   }
 }
 
+@media only screen and (min-width: 992px) {
+  .phone-numbers-design {
+    display: block!important;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .phonebook-section-container {
+    padding-bottom: 120px!important;
+  }
+}
+
 @media only screen and (max-width: 400px) {
   .phone-numbers-form {
     width: 100%!important;
@@ -217,15 +229,5 @@ h1 {
   .phone-numbers-label {
     position: relative!important;
     transform: none;
-  }
-
-  .butterfly-container {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 992px) {
-  .phone-numbers-design {
-    display: block!important;
   }
 }
