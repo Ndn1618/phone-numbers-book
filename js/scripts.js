@@ -84,4 +84,11 @@ elPhonebookForm.addEventListener('submit', function(evt) {
   phoneNumbers.push(newPhoneNumber);
 
   showNewPhoneNumber();
+
+  // Clear all inputs
+  elNameInput.value = '';
+  elNameInput.focus();
+  elSurnameInput.value = '';
+  elPhoneInput.value = '';
+  elRelateInput.value = '';
 });
