@@ -94,6 +94,7 @@ h1 {
 }
 
 .butterfly-container {
+  z-index: 50;
   bottom: -10px;
   right: 15px;
   perspective: 1500px;

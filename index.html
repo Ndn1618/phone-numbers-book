@@ -25,23 +25,23 @@
           </ul>
         </div>
       </div>
-      <form class="phone-numbers-form w-50 d-flex flex-column" method="post" action="https://echo.htmlacademy.ru">
+      <form class="phone-numbers-form w-50 d-flex flex-column js-phonebook-form" method="post" action="https://echo.htmlacademy.ru">
         <h3 class="font-italic mb-4">Fill out</h3>
         <div class="form-group d-flex align-items-center position-relative">
           <label class="phone-numbers-label d-flex align-items-center mb-0 text-uppercase text-right position-absolute" for="name-input">Name <sup class="phone-numbers-label-sup ml-1">*</sup></label>
-          <input class="phone-numbers-input w-100" type="text" name="name" id="name-input" placeholder="Name" required>
+          <input class="phone-numbers-input w-100 js-name-input" type="text" name="name" id="name-input" placeholder="Name" required>
         </div>
         <div class="form-group d-flex align-items-center position-relative">
           <label class="phone-numbers-label d-flex align-items-center mb-0 text-uppercase text-right position-absolute" for="surname-input">Surname <sup class="phone-numbers-label-sup ml-1">*</sup></label>
-          <input class="phone-numbers-input w-100" type="text" name="surname" id="surname-input" placeholder="Surname" required>
+          <input class="phone-numbers-input w-100 js-surname-input" type="text" name="surname" id="surname-input" placeholder="Surname" required>
         </div>
         <div class="form-group d-flex align-items-center position-relative">
           <label class="phone-numbers-label d-flex align-items-center mb-0 text-uppercase text-right position-absolute" for="phone-input">Tel <sup class="phone-numbers-label-sup ml-1">*</sup></label>
-          <input class="phone-numbers-input w-100" type="tel" name="phone-number" id="phone-input" placeholder="00-000-00-00" required>
+          <input class="phone-numbers-input w-100 js-phone-input" type="tel" name="phone-number" id="phone-input" placeholder="00-000-00-00" required>
         </div>
         <div class="form-group d-flex align-items-center position-relative">
           <label class="phone-numbers-label d-flex align-items-center mb-0 text-uppercase text-right position-absolute" for="relate-input">Relate <sup class="phone-numbers-label-sup ml-1">*</sup></label>
-          <input class="phone-numbers-input w-100" type="text" name="relateiveness" id="relate-input" placeholder="Relateiveness" required>
+          <input class="phone-numbers-input w-100 js-relate-input" type="text" name="relateiveness" id="relate-input" placeholder="Relateiveness" required>
         </div>
         <button class="phone-numbers-button btn btn-dark text-white align-self-start text-uppercase font-weight-bold" type="submit">Add new contact</button>
       </form>
@@ -58,7 +58,15 @@
     </div>
   </section>
 
+  <section class="py-4">
+    <div class="container bg-white rounded py-4">
+      <h2 class="sr-only">Phone numbers</h2>
+      <ul class="phone-number-list list-group"></ul>
+    </div>
+  </section>
+
   <script src="js/typewriter.js"></script>
+  <script src="js/utilities.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
