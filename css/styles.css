@@ -223,6 +223,10 @@ h1 {
 }
 
 @media only screen and (max-width: 400px) {
+  .phonebook-section-container {
+    padding-bottom: 30px!important;
+  }
+
   .phone-numbers-form {
     width: 100%!important;
   }
@@ -230,5 +234,9 @@ h1 {
   .phone-numbers-label {
     position: relative!important;
     transform: none;
+  }
+
+  .butterfly-container {
+    display: none;
   }
 }
