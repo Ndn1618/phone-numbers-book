@@ -10,6 +10,12 @@ var elPhoneNumberList = $('.js-phone-number-list');
 var phoneNumbers = [];
 var newPhoneNumber = {};
 
+// Check tel input
+function checkTel(str) {
+  var patt = new RegExp(/^\(?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/);
+  return patt.test(str);
+}
+
 // Function for showing new phone number
 var showNewPhoneNumber = function () {
     var elPhoneNumberItem = document.createElement('li');
@@ -40,9 +46,36 @@ elPhonebookForm.addEventListener('submit', function(evt) {
 
   // Taking value of name, surname, phone number and relativeness inputs
   var elNameInputValue = elNameInput.value.trim();
+  if (elNameInputValue === '') {
+    elNameInput.value = '';
+    elNameInput.focus();
+    return;
+  }
+
   var elSurnameInputValue = elSurnameInput.value.trim();
-  var elPhoneInputValue = parseInt(elPhoneInput.value.trim(), 10);
+  if (elSurnameInputValue === '') {
+    elSurnameInput.value = '';
+    elSurnameInput.focus();
+    return;
+  }
+
+  var elPhoneInputValue = elPhoneInput.value.trim();
+  if (elPhoneInputValue === '') {
+    elPhoneInput.value = '';
+    elPhoneInput.focus();
+    return;
+  } else if (!checkTel(elPhoneInputValue)) {
+      elPhoneInput.value = '';
+      elPhoneInput.focus();
+      return;
+    }
+
   var elRelateInputValue = elRelateInput.value.trim();
+  if (elRelateInputValue === '') {
+    elRelateInput.value = '';
+    elRelateInput.focus();
+    return;
+  }
 
   newPhoneNumber.name = elNameInputValue;
   newPhoneNumber.surname = elSurnameInputValue;
