@@ -5,7 +5,7 @@ var elSurnameInput = $('.js-surname-input', elPhonebookForm);
 var elPhoneInput = $('.js-phone-input', elPhonebookForm);
 var elRelateInput = $('.js-relate-input', elPhonebookForm);
 
-var elPhoneNumberList = $('.phone-number-list');
+var elPhoneNumberList = $('.js-phone-number-list');
 
 var phoneNumbers = [];
 var newPhoneNumber = {};
