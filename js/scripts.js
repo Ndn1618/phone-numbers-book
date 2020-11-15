@@ -12,9 +12,22 @@ var newPhoneNumber = {};
 
 // Check tel input
 function checkTel(str) {
-  var patt = new RegExp(/^\(?([0-9]{2})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/);
+  var patt = new RegExp(/^[-+\/\s]*([0-9][-+\/\s]*){9,}$/);
   return patt.test(str);
 }
+
+// Phone number formatter
+function formatPhoneNumber(phoneNumberString) {
+  var cleaned = ('' + phoneNumberString).replace(/\D/g, '');
+  var match = cleaned.match(/(\d{2})(\d{3})(\d{2})(\d{2})$/);
+  if (match) {
+    initialCode = '+998';
+    return [`${initialCode} (`, match[1], ') ', match[2], '-', match[3], '-', match[4]].join('');
+  }
+  return phoneNumberString;
+}
+
+
 
 // Function for showing new phone number
 var showNewPhoneNumber = function () {
@@ -70,6 +83,9 @@ elPhonebookForm.addEventListener('submit', function(evt) {
       return;
     }
 
+  // Format phone number
+  var formattedPhoneNumber = formatPhoneNumber(elPhoneInputValue);
+
   var elRelateInputValue = elRelateInput.value.trim();
   if (elRelateInputValue === '') {
     elRelateInput.value = '';
@@ -79,7 +95,7 @@ elPhonebookForm.addEventListener('submit', function(evt) {
 
   newPhoneNumber.name = elNameInputValue;
   newPhoneNumber.surname = elSurnameInputValue;
-  newPhoneNumber.phone = elPhoneInputValue;
+  newPhoneNumber.phone = formattedPhoneNumber;
   newPhoneNumber.relativeness = elRelateInputValue;
   phoneNumbers.push(newPhoneNumber);
 
